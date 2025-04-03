@@ -1,0 +1,38 @@
+import random
+number=[1,2,3,4,5,6]
+sam1=random.sample(number,6)
+sam2=random.sample(number,6)
+d1=[1,2,3,4,5,6]
+d2=[1,2,3,4,5,6]
+li=[]
+for i in d1:
+    for j in d2:
+        li.append((i,j))
+
+di={}
+for i in range(2,13):
+    c=0
+    for j in li:
+        if i==j[0]+j[1]:
+            c+=1
+    di[str(i)]=c/len(li)
+print(di)
+sum1=0
+sum2=0
+for i in sam1:
+    sum1+=1
+for j in sam2:
+    sum2+=1
+print(sum1)
+print(sum2)
+d1=di.get(str(sum1))
+d2=di.get(str(sum2))
+print(d1)
+print(d2)
+if(d1>d2):
+    print("d1 success")
+elif(d1==d2):
+        print("tie")
+else:
+    print("d2 success")
+   
