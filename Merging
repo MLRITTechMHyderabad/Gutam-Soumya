@@ -1,0 +1,15 @@
+dict1 = {"a": 1, "b": 2, "c": 3}
+dict2 = {"b": 4, "c": 5, "d": 6}
+
+dict = {}
+
+for i in dict1:
+    dict[i] = [dict1[i]] 
+
+for j in dict2:
+    if j in dict:
+        dict[j].append(dict2[j]) 
+    else:
+        dict[j] = [dict2[j]] 
+
+print("Merged 2 Dictionaries:", dict)
