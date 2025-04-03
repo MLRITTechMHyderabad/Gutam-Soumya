@@ -1,0 +1,7 @@
+li = [[10, 28, 3], [8, 5, 6], [7, 8, 9]]
+
+max_Ele = max(max(row) for row in li)
+min_Ele = min(min(row) for row in li)
+
+print("Max Element:", max_Ele)
+print("Min Element:", min_Ele)
