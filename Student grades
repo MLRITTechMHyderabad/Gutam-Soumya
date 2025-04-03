@@ -1,0 +1,33 @@
+students = [("Alice", [85, 90, 78, 92]),
+           ("Bob", [60, 65, 70, 75]),
+           ("Charlie", [40, 45, 50, 55]),  # Fixed typo: 550 -> 55
+           ("David", [95, 100, 98, 92])]
+
+student_dict = {}
+pass_count = 0
+
+for name, marks in students:
+    total = sum(marks)
+    avg = total / len(marks)
+    student_dict[name] = avg
+
+    if avg >= 50:
+      pass_count += 1
+
+print("Average Scores:", student_dict)
+name="Bob"
+if name in student_dict:
+	print(f" average grade for {name}:{student_dict[name]}")
+else:
+	print(f"{name} not found in records.")
+
+for name, avg in student_dict.items():
+    if avg > 90:
+        print(f"{name} has an excellent score.")
+    else:
+        print(f"{name}'s average score: {avg}")
+print()
+
+print(f"Number of students who passed: {pass_count}")
+
+
